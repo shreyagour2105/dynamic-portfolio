@@ -103,8 +103,8 @@ The app is then available from the backend port (default `5000`). SPA routes fal
 
 ## Submission and verification
 
-- Public portfolio: deployment pending
-- Admin dashboard: deployed URL followed by `/admin`
+- Public portfolio: https://dynamic-portfolio-zek3.onrender.com
+- Admin dashboard: https://dynamic-portfolio-zek3.onrender.com/admin
 - Repository: https://github.com/shreyagour2105/dynamic-portfolio
 
 For CRUD evidence, sign in, create a temporary project or skill, edit it, verify the public page reflects the change, then delete the temporary entry. Capture before/after screenshots. Never include passwords or tokens in screenshots.
