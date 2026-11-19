@@ -2,7 +2,7 @@ services:
   - type: web
     name: dynamic-portfolio
     runtime: node
-    plan: free
+    plan: starter
     buildCommand: npm --prefix backend ci && npm --prefix frontend ci && npm --prefix frontend run build
     startCommand: npm --prefix backend start
     healthCheckPath: /api/health
