@@ -1,4 +1,8 @@
-# Dynamic Portfolio
+# Dynamic Portfolio & Admin Dashboard
+
+**MARVEL Batch 9 | Level 0 – Task 2 | UVCE**
+
+A personal engineering portfolio for Shreya S Gour.
 
 A full-stack portfolio with a responsive public site and authenticated content dashboard. Portfolio content is served from an Express REST API and persisted to a JSON file.
 
@@ -12,7 +16,11 @@ A full-stack portfolio with a responsive public site and authenticated content d
 - Node test suite covering public access, authentication, CRUD, validation, and persistence
 - Single-service production deployment: Express serves the Vite build
 
-The included people, projects, and achievements are clearly labeled demo content and should be replaced in the dashboard.
+The initial content contains six personal projects, twelve skills and six unique achievements. Skill percentages are self-assessment placeholders, not certified proficiency scores.
+
+## Architecture
+
+React/Vite frontend → Express REST API → JSON file storage. The public portfolio and authenticated admin dashboard share the same API. Production serves both interfaces from one Express service.
 
 ## Local setup
 
@@ -31,11 +39,11 @@ npm --prefix backend run dev
 npm --prefix frontend run dev
 ```
 
-If macOS AirPlay Receiver is using port 5000, set `PORT=5050` in `backend/.env`, create `frontend/.env`, and set:
+If macOS AirPlay Receiver is using port 5000, set `PORT=5001` in `backend/.env`, create `frontend/.env`, and set:
 
 ```env
 VITE_API_URL=/api
-VITE_API_PROXY_TARGET=http://localhost:5050
+VITE_API_PROXY_TARGET=http://localhost:5001
 VITE_DEV_PORT=5173
 ```
 
@@ -91,9 +99,17 @@ The app is then available from the backend port (default `5000`). SPA routes fal
 
 ## Deployment
 
-`render.yaml` configures a single Render web service and a persistent disk for the JSON data. Before creating the service, set the secret `ADMIN_PASSWORD`; Render generates `JWT_SECRET`. The free plan and persistent-disk availability may vary, so review current Render plan requirements before deployment.
+`render.yaml` configures a single Render web service and a persistent disk for the JSON data. Before creating the service, set the secret `ADMIN_PASSWORD`; Render generates `JWT_SECRET`. The blueprint selects the paid Starter plan with a persistent disk. Review pricing before creating the service.
 
-No deployment or Git remote is created by this repository.
+## Submission and verification
+
+- Public portfolio: deployment pending
+- Admin dashboard: deployed URL followed by `/admin`
+- Repository: https://github.com/shreyagour2105/dynamic-portfolio
+
+For CRUD evidence, sign in, create a temporary project or skill, edit it, verify the public page reflects the change, then delete the temporary entry. Capture before/after screenshots. Never include passwords or tokens in screenshots.
+
+Fresh installations load the personalized seed. Existing JSON data is retained across restarts when stored on a persistent disk. Production verification and screenshots remain pending.
 
 ## Current limitations
 
