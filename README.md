@@ -31,6 +31,14 @@ npm --prefix backend run dev
 npm --prefix frontend run dev
 ```
 
+If macOS AirPlay Receiver is using port 5000, set `PORT=5050` in `backend/.env`, create `frontend/.env`, and set:
+
+```env
+VITE_API_URL=/api
+VITE_API_PROXY_TARGET=http://localhost:5050
+VITE_DEV_PORT=5173
+```
+
 - Portfolio: http://localhost:5173
 - Admin: http://localhost:5173/admin
 - API: http://localhost:5000/api
