@@ -99,7 +99,7 @@ The app is then available from the backend port (default `5000`). SPA routes fal
 
 ## Deployment
 
-`render.yaml` configures a single Render web service and a persistent disk for the JSON data. Before creating the service, set the secret `ADMIN_PASSWORD`; Render generates `JWT_SECRET`. The blueprint selects the paid Starter plan with a persistent disk. Review pricing before creating the service.
+`render.yaml` configures a single free Render web service with ephemeral JSON storage. Before creating the service, set the secret `ADMIN_PASSWORD`; Render generates `JWT_SECRET`. No paid disk is configured. Hosted edits may be lost on restart or redeployment; personalized seed content is restored on fresh startup. Persistent hosted edits require durable storage.
 
 ## Submission and verification
 
